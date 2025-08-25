@@ -1,11 +1,17 @@
+# ==============================================================================
+# File 1: ai_service/app.py (CORRECTED)
+# ==============================================================================
+# Description: The relative import has been changed to a direct import.
+# Action: Replace the code in your app.py file with this.
+# ------------------------------------------------------------------------------
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
+from pantic import BaseModel
 import cv2
 import numpy as np
 import base64
 import asyncio
-# Use a relative import by adding a dot before 'utils'
-from .utils.video_processing import process_frame_for_analysis
+# CORRECTED: Changed from ".utils" to "utils"
+from utils.video_processing import process_frame_for_analysis
 
 app = FastAPI(
     title="AI Crowd Monitoring Service",
