@@ -11,7 +11,7 @@ import numpy as np
 import base64
 import asyncio
 # CORRECTED: Changed from ".utils" to "utils"
-from utils.video_processing import process_frame_for_analysis
+from video_processing import process_frame_for_analysis
 
 app = FastAPI(
     title="AI Crowd Monitoring Service",
@@ -50,3 +50,4 @@ async def analyze_video_frame(request: AnalysisRequest):
     except Exception as e:
         print(f"FATAL: Error during processing: {e}")
         raise HTTPException(status_code=500, detail="Internal server error during AI analysis.")
+
