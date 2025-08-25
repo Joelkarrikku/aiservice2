@@ -7,7 +7,7 @@ import cv2
 from ultralytics import YOLO
 from deepface import DeepFace
 # CORRECTED: Changed from ".face_utils" to "face_utils"
-from utils.face_utils import recognize_face, initialize_known_faces
+from face_utils import recognize_face, initialize_known_faces
 
 # --- Model Initialization ---
 print("Initializing AI models...")
