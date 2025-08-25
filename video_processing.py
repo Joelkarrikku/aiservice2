@@ -1,11 +1,13 @@
 import cv2
 from ultralytics import YOLO
 from deepface import DeepFace
-from .face_utils import recognize_face, initialize_known_faces
+# CORRECTED: Changed from ".face_utils" to "face_utils"
+from face_utils import recognize_face, initialize_known_faces
 
 # --- Model Initialization ---
 print("Initializing AI models...")
-person_detector = YOLO('ai_service/yolov8n.pt') 
+# The path needs to be relative to the root of the repo now
+person_detector = YOLO('yolov8n.pt') 
 known_face_embeddings, known_face_metadata = initialize_known_faces()
 print("AI models initialized.")
 
