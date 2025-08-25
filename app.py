@@ -5,7 +5,7 @@
 # Action: Replace the code in your app.py file with this.
 # ------------------------------------------------------------------------------
 from fastapi import FastAPI, HTTPException
-from pantic import BaseModel
+from pydantic import BaseModel
 import cv2
 import numpy as np
 import base64
