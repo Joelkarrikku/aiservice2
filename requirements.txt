@@ -28,33 +28,3 @@ tf-keras==2.15.0
 # For handling image data
 Pillow
 python-multipart
-
-# ==============================================================================
-# File 2: ai_service/.gitignore (CORRECTED)
-# ==============================================================================
-# Description: This file tells Git which files and folders to IGNORE.
-#              The line `venv/` belongs here.
-# Action: Make sure your .gitignore file contains this content.
-# ------------------------------------------------------------------------------
-# Python virtual environment
-venv/
-__pycache__/
-
-# Python bytecode files
-*.pyc
-*.pyo
-*.pyd
-
-# Data folder containing registered face embeddings (for privacy)
-data/
-
-# Downloaded AI models
-yolov8n.pt
-.deepface/
-
-# Log files
-*.log
-
-# IDE-specific files
-.vscode/
-.idea/
