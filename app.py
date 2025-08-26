@@ -1,8 +1,7 @@
 # ==============================================================================
-# File 1: ai_service/app.py (CORRECTED)
+# File: app.py (CLEANED)
 # ==============================================================================
-# Description: The relative import has been changed to a direct import.
-# Action: Replace the code in your app.py file with this.
+# Action: Replace the entire content of your app.py file with this code.
 # ------------------------------------------------------------------------------
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
@@ -10,8 +9,7 @@ import cv2
 import numpy as np
 import base64
 import asyncio
-# CORRECTED: Changed from ".utils" to "utils"
-from video_processing import process_frame_for_analysis
+from utils.video_processing import process_frame_for_analysis
 
 app = FastAPI(
     title="AI Crowd Monitoring Service",
@@ -50,4 +48,3 @@ async def analyze_video_frame(request: AnalysisRequest):
     except Exception as e:
         print(f"FATAL: Error during processing: {e}")
         raise HTTPException(status_code=500, detail="Internal server error during AI analysis.")
-
